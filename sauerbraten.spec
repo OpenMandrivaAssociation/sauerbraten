@@ -13,7 +13,7 @@ Name:		%{name}
 Version:        %{version}
 Release:        %{release}
 Summary:	Sauerbraten - A multiplayer/singleplayer first person shooter
-License:	ZLIB license
+License:	ZLIB license, BSD
 URL:		http://www.sauerbraten.org/
 Group:		Games/Arcade
 Source0:	sauerbraten_%{version}_justice_edition_linux.tar.bz2
@@ -28,6 +28,7 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	unzip
 BuildRequires:	desktop-file-utils
 BuildRequires:	zlib1-devel
+BuildRequires:	enet
 
 %description
 Sauerbraten (a.k.a. Cube 2) is a free multiplayer/singleplayer
@@ -140,6 +141,7 @@ cat > $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop << EOF
 Encoding=UTF-8
 Name=Sauerbraten
 Comment=%{summary}
+Comment[ru]=Sauerbraten - одно/многопользовательский шутер от первого лица
 Exec=%{_bindir}/%{name}.sh
 Icon=%{name}
 Terminal=false

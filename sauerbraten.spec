@@ -28,7 +28,11 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	unzip
 BuildRequires:	desktop-file-utils
 BuildRequires:	zlib1-devel
+%if %mdkversion <= 201100
+BuildRequires:	enet1.2
+%else
 BuildRequires:	enet
+%endif
 
 %description
 Sauerbraten (a.k.a. Cube 2) is a free multiplayer/singleplayer

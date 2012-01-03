@@ -29,7 +29,7 @@ BuildRequires:	unzip
 BuildRequires:	desktop-file-utils
 BuildRequires:	zlib1-devel
 %if %mdkversion >= 201100
-BuildRequires:	enet1
+BuildRequires:	enet1.2_0
 %else
 BuildRequires:	enet
 %endif

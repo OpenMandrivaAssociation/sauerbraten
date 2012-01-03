@@ -28,8 +28,8 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	unzip
 BuildRequires:	desktop-file-utils
 BuildRequires:	zlib1-devel
-%if %mdkversion <= 201100
-BuildRequires:	enet1.2
+%if %mdkversion >= 201100
+BuildRequires:	enet1
 %else
 BuildRequires:	enet
 %endif

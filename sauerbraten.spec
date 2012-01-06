@@ -4,7 +4,7 @@
 %{?_without_ccache: %global use_ccache 0}
 %define name	sauerbraten
 %define version 2010_07_28
-%define release %mkrel 1
+%define release %mkrel 2
 %define _enable_debug_packages	%{nil}
 %define debug_package %{nil}
 %define _prefix	/usr
@@ -29,6 +29,7 @@ BuildRequires:	unzip
 BuildRequires:	desktop-file-utils
 BuildRequires:	zlib1-devel
 BuildRequires:	enet-devel
+Requires:	enet
 
 %description
 Sauerbraten (a.k.a. Cube 2) is a free multiplayer/singleplayer

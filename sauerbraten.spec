@@ -1,24 +1,16 @@
-%define use_ccache	1
-%define ccachedir	~/.ccache-OOo%{mdvsuffix}
-%{?_with_ccache: %global use_ccache 1}
-%{?_without_ccache: %global use_ccache 0}
-%define name	sauerbraten
-%define version 2010_07_28
-%define release %mkrel 2
-%define _enable_debug_packages	%{nil}
-%define debug_package %{nil}
-%define _prefix	/usr
+#define _enable_debug_packages	%{nil}
+#define debug_package %{nil}
 
-Name:		%{name}
-Version:        %{version}
-Release:        %{release}
+Name:		sauerbraten
+Version:        2010_07_28
+Release:        3
 Summary:	Sauerbraten - A multiplayer/singleplayer first person shooter
 License:	ZLIB license, BSD
 URL:		http://www.sauerbraten.org/
 Group:		Games/Arcade
-Source0:	sauerbraten_%{version}_justice_edition_linux.tar.bz2
+Source0:	http://switch.dl.sourceforge.net/project/sauerbraten/sauerbraten/2010_07_19/sauerbraten_%{version}_justice_edition_linux.tar.bz2
 Source1:	%{name}.png
-BuildRoot:	%{_tmppath}/%{name}-%{version}-build
+Patch0:		sauerbraten-linkage.patch
 BuildRequires:	gcc-c++
 BuildRequires:	libpng-devel
 BuildRequires:	mesa-common-devel
@@ -57,12 +49,14 @@ Group:		Games/Arcade
 %description server
 Sauerbraten (a.k.a. Cube 2) is a free multiplayer/singleplayer
 first person shooter, built as a major redesign of the Cube FPS.
-This package is useful if you only need the Sauerbraten server and not the game itself.
+This package is useful if you only need the Sauerbraten server and
+not the game itself.
 This package contains a standalone server.
 
 
 %prep
 %setup -q -n %{name}
+%apply_patches
 
 %__install -dm 755 bin_unix
 
@@ -180,8 +174,6 @@ cp -a data packages $RPM_BUILD_ROOT/%{_datadir}/games/sauerbraten
 %{_prefix}/games/sauer_client
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
-%{_bindir}/%{name}-server.sh
-%{_prefix}/games/sauer_server
 %dir %{_datadir}/games/sauerbraten
 %{_datadir}/games/sauerbraten/data
 %{_datadir}/games/sauerbraten/packages
@@ -191,3 +183,19 @@ cp -a data packages $RPM_BUILD_ROOT/%{_datadir}/games/sauerbraten
 %defattr(-,root,root)
 %{_bindir}/%{name}-server.sh
 %{_prefix}/games/sauer_server
+
+
+%changelog
+* Tue Dec  4 2012 Bernhard Rosenkraenzer <bero@bero.eu> 2010_07_28-3
+- Fix build
+- Fix duplicates
+
+* Fri Jan 06 2012 Sergey Zhemoitel <serg@mandriva.org> 2010_07_28-2mdv2011.0
++ Revision: 758243
+- imported package sauerbraten
+
+  + Yuri Myasoedov <omerta13@mandriva.org>
+    - Fixed BuildRequires section
+    - Fixed BuildRequires section
+    - Fixed BuildRequires section
+

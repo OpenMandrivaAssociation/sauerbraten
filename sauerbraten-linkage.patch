@@ -1,0 +1,11 @@
+--- sauerbraten/src/Makefile.bero	2012-12-04 21:58:59.711198370 +0100
++++ sauerbraten/src/Makefile	2012-12-04 21:59:12.050314204 +0100
+@@ -21,7 +21,7 @@ CLIENT_INCLUDES= $(INCLUDES) -Iinclude
+ CLIENT_LIBS= -mwindows -Llib -lSDL -lSDL_image -lSDL_mixer -lzdll -lopengl32 -lenet -lws2_32 -lwinmm
+ else	
+ CLIENT_INCLUDES= $(INCLUDES) -I/usr/X11R6/include `sdl-config --cflags`
+-CLIENT_LIBS= -Lenet/.libs -lenet -L/usr/X11R6/lib `sdl-config --libs` -lSDL_image -lSDL_mixer -lz -lGL
++CLIENT_LIBS= -Lenet/.libs -lenet -L/usr/X11R6/lib `sdl-config --libs` -lSDL_image -lSDL_mixer -lX11 -lz -lGL
+ endif
+ ifeq ($(PLATFORM),Linux)
+ CLIENT_LIBS+= -lrt

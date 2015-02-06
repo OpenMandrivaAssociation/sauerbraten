@@ -1,6 +1,6 @@
 Name:		sauerbraten
 Version:	2013_02_03
-Release:	1
+Release:	2
 Summary:	A multi-player/single-player first person shooter
 Group:		Games/Arcade
 License:	ZLIB license, BSD

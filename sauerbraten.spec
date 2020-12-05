@@ -1,19 +1,20 @@
 Name:		sauerbraten
-Version:	2013_02_03
-Release:	2
+Version:	2020_11_29
+Release:	1
 Summary:	A multi-player/single-player first person shooter
 Group:		Games/Arcade
 License:	ZLIB license, BSD
 URL:		http://www.sauerbraten.org/
-Source0:	http://switch.dl.sourceforge.net/project/sauerbraten/sauerbraten/%{version}/sauerbraten_%{version}_collect_edition_linux.tar.bz2
+Source0:	https://sourceforge.net/projects/sauerbraten/files/sauerbraten/%{version}/%{name}_%{version}_linux.tar.bz2
 Source1:	%{name}.png
+
 BuildRequires:	imagemagick
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(libpng)
-BuildRequires:	pkgconfig(sdl)
-BuildRequires:	pkgconfig(SDL_image)
-BuildRequires:	pkgconfig(SDL_mixer)
+BuildRequires:	pkgconfig(sdl2)
+BuildRequires:	pkgconfig(SDL2_image)
+BuildRequires:	pkgconfig(SDL2_mixer)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libenet) >= 1.3.5
 Requires:	%{name}-data = %{EVRD}

@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 Name:		sauerbraten
 Version:	2020_12_04
 Release:	1

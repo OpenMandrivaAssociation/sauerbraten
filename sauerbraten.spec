@@ -1,5 +1,5 @@
 Name:		sauerbraten
-Version:	2020_11_29
+Version:	2020_12_04
 Release:	1
 Summary:	A multi-player/single-player first person shooter
 Group:		Games/Arcade

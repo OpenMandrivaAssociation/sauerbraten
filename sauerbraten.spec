@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:		sauerbraten
-Version:	2020_12_27
+Version:	2020_12_29
 Release:	1
 Summary:	A multi-player/single-player first person shooter
 Group:		Games/Arcade

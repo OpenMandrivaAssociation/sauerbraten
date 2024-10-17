@@ -6,7 +6,7 @@ Release:	1
 Summary:	A multi-player/single-player first person shooter
 Group:		Games/Arcade
 License:	ZLIB license, BSD
-URL:		http://www.sauerbraten.org/
+URL:		https://www.sauerbraten.org/
 Source0:	https://sourceforge.net/projects/sauerbraten/files/sauerbraten/%{version}/%{name}_%{version}_linux.tar.bz2
 Source1:	%{name}.png
 
